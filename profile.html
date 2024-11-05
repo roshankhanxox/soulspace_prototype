@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SoulSpace - Profile & Leaderboard</title>
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <div class="background-animation"></div>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">SoulSpace</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="moodlog.html">Log Mood</a></li>
+                <li><a href="moodchart.html">Mood Trends</a></li>
+                <li><a href="chat.html">Chat</a></li>
+                <li><a href="profile.html" class="active">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Your Profile</h1>
+        
+        <div class="mini-nav">
+            <button class="mini-nav-btn active" data-target="mood-logs">Mood Logs</button>
+            <button class="mini-nav-btn" data-target="friends-section">Close Friends</button>
+            <button class="mini-nav-btn" data-target="leaderboard-section">Leaderboard</button>
+        </div>
+
+        <section id="mood-logs" class="content-section active">
+            <h2>Mood Logs</h2>
+            <div id="moodLogsList" class="mood-logs-grid"></div>
+            <div class="pagination">
+                <button id="prevPage" class="pagination-btn">&laquo; Previous</button>
+                <span id="pageInfo"></span>
+                <button id="nextPage" class="pagination-btn">Next &raquo;</button>
+            </div>
+        </section>
+
+        <section id="friends-section" class="content-section">
+            <h2>Close Friends</h2>
+            <ul id="friendsList"></ul>
+            <div class="input-group">
+                <input type="text" id="addFriendInput" placeholder="Add a friend by username">
+                <button id="addFriendBtn">Add Friend</button>
+            </div>
+        </section>
+
+        <section id="leaderboard-section" class="content-section">
+            <h2>Leaderboard</h2>
+            <ul id="leaderboardList"></ul>
+        </section>
+    </div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
